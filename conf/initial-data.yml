@@ -1,0 +1,84 @@
+
+# Candidats
+
+candidats:
+
+    - !!models.Candidat
+        lastName:      Sarkozy
+        firstName:     Nicolas
+        nameParty:     Union pour un Mouvement Populaire (UMP)
+        imageName:     nicolas_sarkozy.png
+        colorParty:    '#0052AE'
+        active:        true
+
+    - !!models.Candidat
+        lastName:      Hollande
+        firstName:     François
+        nameParty:     Parti Socialiste (PS)
+        imageName:     françois_hollande.png
+        colorParty:    '#E30042'
+        active:        true
+
+    - !!models.Candidat
+        lastName:       Poutou
+        firstName:      Philippe
+        nameParty:      Nouveau Parti anticapitaliste (NPA)
+        imageName:      philippe_poutou.png
+        colorParty:     '#E42322'
+        active:         true
+
+    - !!models.Candidat
+        lastName:       Joly
+        firstName:      Eva
+        nameParty:      Europe Ecologie Les Verts
+        imageName:      eva_joly.png
+        colorParty:     '#7AB51D'
+        active:         true
+
+    - !!models.Candidat
+        lastName:       Bayrou
+        firstName:      François
+        nameParty:      Mouvement Démocrate (MoDem)
+        imageName:      francois_bayrou.png
+        colorParty:     '#FB7102'
+        active:         true
+
+    - !!models.Candidat
+        lastName:       Le Pen
+        firstName:      Marine
+        nameParty:      Front National (FN)
+        imageName:      marine_le_pen.png
+        colorParty:     '#0D3689'
+        active:         true
+
+    - !!models.Candidat
+        lastName:       Dupont-Aignan
+        firstName:      Nicolas
+        nameParty:      Debout La République (DLR)
+        imageName:      nicolas_dupont-aignan.png
+        colorParty:     '#692373'
+        active:         true
+
+    - !!models.Candidat
+        lastName:       Mélenchon
+        firstName:      Jean-Luc
+        nameParty:      Front de Gauche (FG)
+        imageName:      jean-luc_mélenchon.png
+        colorParty:     '#DD0000'
+        active:         true
+
+    - !!models.Candidat
+        lastName:       Arthaud
+        firstName:      Nathalie
+        nameParty:      Lutte Ouvrière (LO)
+        imageName:      nathalie_arthaud.png
+        colorParty:     '#EB2C29'
+        active:         true
+
+    - !!models.Candidat
+        lastName:       Cheminade
+        firstName:      Jacques
+        nameParty:      Solidarité et Progrès (S&P)
+        imageName:      jacques_cheminade.png
+        colorParty:     '#E53517'
+        active:         true

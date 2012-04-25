@@ -1,0 +1,95 @@
+@title = {
+Votre opinion sur les candidats aux élections 2012
+<small>&mdash;PrezMash</small>
+}
+
+@main(title){
+<script type="text/javascript" charset="utf-8">
+
+	var baseImg = "@routes.Assets.at("images/")";
+	var candidats;
+	var currentCandidatIdx = 0;
+
+    function success(data, textStatus, jqXHR){
+		candidats = data;
+		runEffect();
+	}
+
+	function runEffect() {
+		$(function() {
+			$("#fullName").empty();
+			$("#party").empty();
+			$("#profil").empty();
+			$("#faceprez").attr("src",baseImg + candidats[currentCandidatIdx].imageName);
+			$("#fullName").append(candidats[currentCandidatIdx].firstName + " " + candidats[currentCandidatIdx].lastName);
+			$("#party").append(candidats[currentCandidatIdx].nameParty);
+		});
+		currentCandidatIdx++;
+	}
+
+	$(function() {
+        $("#faceprez").load(function() {
+            var options = {};
+            options = {
+                to : {
+                width : 280,
+                height : 185
+                }
+            };
+            $("#effect").show("blind", options, 800, function() {
+                setTimeout(function(){
+                    $(".clickableImage").css("display", "block");
+                    $("#prezcontent").css("display", "block");
+                }, 50);
+            });
+        });
+		function getCandidats() {
+			$.getJSON('candidats.json', success);
+		};
+        setTimeout(function(){
+            getCandidats();
+        }, 70);
+
+		$("#plus").click(function() {
+            $(".clickableImage").css("display", "none");
+			if (candidats.length == currentCandidatIdx) {
+				window.location = "/stats";
+			} else {
+                $.ajax({
+                    url: 'vote',
+                    type: 'POST',
+                    data: 'candidat='+candidats[currentCandidatIdx-1].id,
+                    success: function() { runEffect(); }
+                });
+			}
+			return false;
+		});
+		$("#moins").click(function() {
+            $(".clickableImage").css("display", "none");
+			if (candidats.length == currentCandidatIdx) {
+				window.location = "/stats";
+			} else {
+				runEffect();
+			}
+			return false;
+		});
+    });
+</script>
+<div class="app">
+	<div class="toggler" align="center">
+		<div id="effect" class="ui-widget-content ui-corner-all">
+			<img id="faceprez" alt="" src=""/>
+		</div>
+	</div>
+<div class="clickableImage" align="center">
+        <dl id="prezcontent">
+            <dt>Nom</dt>
+            <dd id="fullName"></dd>
+            <dt>Parti</dt>
+            <dd id="party"></dd>
+        </dl>
+		<a href="#" id="plus" class="ui-state-default ui-corner-all"><img alt="plus" id="plusimg" src="@routes.Assets.at("images/plus-out.png")" onclick='this.src="@routes.Assets.at("images/plus-out.png")"'/></a>
+		<a href="#" id="moins" class="ui-state-default ui-corner-all"><img alt="moins" id="moinsimg" src="@routes.Assets.at("images/moins-out.png")" onclick='this.src="@routes.Assets.at("images/moins-out.png")"'/></a>
+	</div>
+</div>
+}

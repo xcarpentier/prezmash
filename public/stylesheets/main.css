@@ -1,0 +1,93 @@
+html,body {
+	background-color: #eee;
+}
+body {
+	padding-top: 40px;
+
+}
+.container>footer p {
+	text-align: center;
+}
+.container {
+	width: 810px;
+}
+.content {
+	background-color: #fff;
+	padding: 15px;
+	margin: 0 -15px;
+	-webkit-border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	border-radius: 0 0 6px 6px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+	min-height: 10px;
+}
+.page-header {
+	background-color: #f5f5f5;
+	padding: 20px 20px 10px;
+	margin: -20px -20px 20px;
+}
+.content .span4 {
+	padding-top: 9px;
+	margin-top: 10px;
+	border-top: 1px solid #eee;
+	text-align: center;
+}
+.topbar .btn {
+	border: 0;
+}
+.topbar p {
+	color: #888;
+}
+.profile {
+	margin-left: 32px;
+}
+.profile:first-child>.danger {
+	display: none;
+}
+.phones label {
+	display: none;
+}
+.phones div:first-child label {
+	display: inline-block;
+}
+.manage {
+	margin-left: 32px;
+	margin-bottom: 20px;
+}
+/* for slider */
+.app {
+	height: 450px;
+}
+a,a:focus {
+	outline: 0;
+}
+#button {
+	padding: .5em 1em;
+	text-decoration: none;
+}
+#effect {
+	padding: .4em;
+	position: relative;
+}
+
+.clickableImage {
+	display: none;
+}
+#prezcontent{
+	display: none;
+}
+#effect {
+	display: none;
+}
+.prezcontent {
+    left: 40%;
+    position: relative;
+}
+html body div.container div.content div.row div.span14 div#chart div#highcharts-0.highcharts-container svg text tspan[x="810"]{
+    display: none;
+}
+footer{
+    text-align: center;
+}

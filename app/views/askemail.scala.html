@@ -1,0 +1,32 @@
+@(signupForm: Form[User])
+
+@import helper._
+@import helper.twitterBootstrap._
+
+@title = {
+Enregistrez votre email et donnez votre opinion
+<small><a href="@routes.Application.stat">Ou allez voir les statistiques</a></small>
+}
+
+@main(title) {
+
+@helper.form(action = routes.Application.postEmail) {
+
+<fieldset>
+    <legend>Votre email</legend>
+
+    @inputText(
+    signupForm("email"),
+    '_label -> "Email",
+    '_help -> "Entrez un email valide",
+    '_error -> signupForm.globalError
+    )
+</fieldset>
+<div class="actions">
+    <input type="submit" class="btn primary" value="Enregistrer">
+    <a href="@routes.Application.index" class="btn">Annuler</a>
+</div>
+
+}
+
+}

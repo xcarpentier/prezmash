@@ -1,0 +1,77 @@
+@title = {
+Statistiques PrezMash, camembert par candidat aux élections présidentielles 2012
+}
+
+@main(title) {
+<script src="@routes.Assets.at("javascripts/highcharts.js")" type="text/javascript"></script>
+<script src="@routes.Assets.at("javascripts/exporting.js")" type="text/javascript"></script>
+<script type="text/javascript" charset="utf-8">
+    var chart;
+    $(document).ready(function(){
+        setTimeout(function(){
+            $.getJSON('stats.json', draw);
+            $.getJSON('nbvote.json', displayNumber);
+        }, 70);
+    });
+    function displayNumber(dataResult, textStatus, jqXHR) {
+
+    }
+    function draw(dataResult, textStatus, jqXHR) {
+        chart = new Highcharts.Chart({
+                    chart : {
+                        renderTo : 'chart',
+                        plotBackgroundColor : null,
+                        plotBorderWidth : null,
+                        plotShadow : false
+                    },
+                    title : {
+                        text : 'Pourcentage par candidat aux élections'
+                        },
+        tooltip : {
+            formatter : function() {
+                return '<b>' + this.point.name + '</b>: '
+                + Math.round(this.percentage) + ' %';
+            }
+         },
+        plotOptions : {
+        pie : {
+        allowPointSelect : true,
+        cursor : 'pointer',
+        dataLabels : {
+            enabled : true,
+            color : '#000000',
+            connectorColor : '#000000',
+            formatter : function() {
+                return '<b>' + this.point.name + '</b>: '
+                    + Math.round(this.percentage) + ' %';
+        }
+    }
+    }
+    },
+    series : [ {
+    type : 'pie',
+    name : 'Présidentielle 2012, PrezMash',
+    data : dataResult,
+    } ]
+    });
+    }
+</script>
+
+<div id="chart" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+<div align="center" style="padding-top:30px">Nombre de vote total: <strong id="nbvote"></strong></div>
+<div align="center" style="padding-top:30px"><a href="/">&Agrave; vous de voter !</a>&nbsp;&nbsp;</div>
+<div id="share" style="background-color: white; position: relative; top: -450px; width: 145px; left: 669px;">
+    <div id="twitter">
+        <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+        <script>!function(d,s,id){var
+            js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+        </script>
+    </div>
+    <div id="facebook" style="padding-bottom:7px;">
+        <a name="fb_share"></a>
+        <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript">
+        </script>
+    </div>
+</div>
+
+}
