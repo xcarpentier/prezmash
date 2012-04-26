@@ -1,4 +1,12 @@
-This is your new Play 2.0 application
+PrezMash : france 2012 presidential
 =====================================
 
-This file will be packaged with your application, when using `play dist`.
+Vote for your favorites candidats.
+
+The candidate are laod in your database on startup.
+
+You can copy, fork and what ever you want with my code without any feedback.
+
+But please see my website ;-) : http://xavier-carpentier.fr !
+
+And if you want follow me on twitter : @xcapetir !
