@@ -14,15 +14,14 @@ More information : http://xavier-carpentier.fr/developments/prezmash/
 Why it does it this way, benefits and drawbacks
 -----------------------------------------------
 
-Using play because is more concise.
-
+Using Play! because it is more concise.
 
 Architecture and design
 -----------------------
 
-MVC paradigme via play, force very clean developments.
+MVC paradigm via Play!, force very clean developments.
 
-Using Ajax for data exange.
+Using Ajax for data exanges.
 
 Compile, deployed and used 
 --------------------------
@@ -31,9 +30,15 @@ This project was deployed on Amazon AWS.
 
 To test it you need to install Play! and configure a MySql database. (or other)
 
+To configure database change on conf/application.conf file :
+
+db.default.url="jdbc:mysql://localhost:8889/prezmash?autoReconnect=true"
+
+autoReconnect=true because it's deployed on Amazon and some weird things happened, like disconnection.
+
 Licence
 -------
 
 You can copy, fork and what ever you want with my code without any feedback.
-But please see my website ;-) : http://xavier-carpentier.fr !
-And if you want follow me on twitter : @xcapetir !
+But please go to my website : http://xavier-carpentier.fr
+And if you want to follow me on twitter : @xcapetir !
