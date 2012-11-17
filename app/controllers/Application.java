@@ -114,10 +114,10 @@ public class Application extends Controller {
             if (cookie != null) {
                 final ConfigurationBuilder cb = new ConfigurationBuilder();
                 cb.setDebugEnabled(true)
-                        .setOAuthConsumerKey("UD7nOUBM3l7IblZ2E7ZJ1A")
-                        .setOAuthConsumerSecret("EEqJSZprIKTYvjg9RRHXb7sSIduloLM7q2SeJCpDBU")
-                        .setOAuthAccessToken("526411186-xqKGtkL9BqRYRvszDF5gwMoYxrHcx1Ij1yytonUO")
-                        .setOAuthAccessTokenSecret("GVeNGp71IlkxITip7t4IRnrYjqZudkMHtsqUOmvA");
+                        .setOAuthConsumerKey("xxx")
+                        .setOAuthConsumerSecret("xxx")
+                        .setOAuthAccessToken("xxx")
+                        .setOAuthAccessTokenSecret("xxx");
 
                 final TwitterFactory tf = new TwitterFactory(cb.build());
                 final Twitter twitter = tf.getInstance();
