@@ -1,12 +1,37 @@
-PrezMash : france 2012 presidential
-=====================================
+==============================================
+PrezMash : France 2012 presidential with Play!
+==============================================
 
-Vote for your favorites candidats.
+Vote for your favorites candidats
+---------------------------------
 
-Candidates are laod on startup.
+A sample predential FaceMash.
+
+Technology : Play 2 (Java), jQuery, MySql and Twitter4j
+
+More information : http://xavier-carpentier.fr/developments/prezmash/
+
+Why it does it this way, benefits and drawbacks
+-----------------------------------------------
+
+Using play because is more concise.
+
+
+Architecture and design
+-----------------------
+
+Using Ajax for data exange.
+
+Compile, deployed and used 
+--------------------------
+
+This project was deployed on Amazon AWS.
+
+To test it you need to install Play! and configure a MySql database. (or other)
+
+Licence
+-------
 
 You can copy, fork and what ever you want with my code without any feedback.
-
 But please see my website ;-) : http://xavier-carpentier.fr !
-
 And if you want follow me on twitter : @xcapetir !
