@@ -26,7 +26,7 @@ Using Ajax for data exchanges.
 Compile, deployed and used 
 --------------------------
 
-This project was deployed on Amazon AWS.
+This project was deployed on Amazon EC2.
 
 To test it you need to install Play! and configure a MySql database. (or other)
 
